@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE33B26C16CEC2C600B90514 /* CALayer+setUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9B925116CEC0F1009AB207 /* CALayer+setUIColor.m */; };
+		AE33B26E16CEC2E400B90514 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE33B26D16CEC2E400B90514 /* QuartzCore.framework */; };
 		AE9B922E16CEB1EA009AB207 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922D16CEB1EA009AB207 /* UIKit.framework */; };
 		AE9B923016CEB1EA009AB207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922F16CEB1EA009AB207 /* Foundation.framework */; };
 		AE9B923216CEB1EA009AB207 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B923116CEB1EA009AB207 /* CoreGraphics.framework */; };
@@ -21,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE33B26D16CEC2E400B90514 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AE9B922A16CEB1EA009AB207 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9B922D16CEB1EA009AB207 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE9B922F16CEB1EA009AB207 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +40,8 @@
 		AE9B924616CEB1EA009AB207 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AE9B924816CEB1EA009AB207 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AE9B924916CEB1EA009AB207 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AE9B925016CEC0F1009AB207 /* CALayer+setUIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CALayer+setUIColor.h"; path = "../../FaceDancer/CALayer+setUIColor.h"; sourceTree = "<group>"; };
+		AE9B925116CEC0F1009AB207 /* CALayer+setUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CALayer+setUIColor.m"; path = "../../FaceDancer/CALayer+setUIColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE33B26E16CEC2E400B90514 /* QuartzCore.framework in Frameworks */,
 				AE9B922E16CEB1EA009AB207 /* UIKit.framework in Frameworks */,
 				AE9B923016CEB1EA009AB207 /* Foundation.framework in Frameworks */,
 				AE9B923216CEB1EA009AB207 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +62,7 @@
 		AE9B922116CEB1EA009AB207 = {
 			isa = PBXGroup;
 			children = (
+				AE33B26D16CEC2E400B90514 /* QuartzCore.framework */,
 				AE9B923316CEB1EA009AB207 /* test */,
 				AE9B922C16CEB1EA009AB207 /* Frameworks */,
 				AE9B922B16CEB1EA009AB207 /* Products */,
@@ -83,6 +90,8 @@
 		AE9B923316CEB1EA009AB207 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				AE9B925016CEC0F1009AB207 /* CALayer+setUIColor.h */,
+				AE9B925116CEC0F1009AB207 /* CALayer+setUIColor.m */,
 				AE9B923C16CEB1EA009AB207 /* AppDelegate.h */,
 				AE9B923D16CEB1EA009AB207 /* AppDelegate.m */,
 				AE9B924516CEB1EA009AB207 /* MainStoryboard.storyboard */,
@@ -176,6 +185,7 @@
 				AE9B923A16CEB1EA009AB207 /* main.m in Sources */,
 				AE9B923E16CEB1EA009AB207 /* AppDelegate.m in Sources */,
 				AE9B924A16CEB1EA009AB207 /* ViewController.m in Sources */,
+				AE33B26C16CEC2C600B90514 /* CALayer+setUIColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +308,7 @@
 				AE9B924F16CEB1EA009AB207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
