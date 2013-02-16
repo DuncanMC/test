@@ -45,6 +45,8 @@
 		AE9B925116CEC0F1009AB207 /* CALayer+setUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CALayer+setUIColor.m"; path = "../../FaceDancer/CALayer+setUIColor.m"; sourceTree = "<group>"; };
 		AED94ECF16CF2D71009DDE89 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		AED94ED016CF2D71009DDE89 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		AED94ED516CFF3ED009DDE89 /* StaticTableParentProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableParentProtocol.h; sourceTree = "<group>"; };
+		AED94ED616CFF4FD009DDE89 /* StaticTableViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableViewControllerProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,8 @@
 			children = (
 				AE9B925016CEC0F1009AB207 /* CALayer+setUIColor.h */,
 				AE9B925116CEC0F1009AB207 /* CALayer+setUIColor.m */,
+				AED94ED516CFF3ED009DDE89 /* StaticTableParentProtocol.h */,
+				AED94ED616CFF4FD009DDE89 /* StaticTableViewControllerProtocol.h */,
 				AE9B923C16CEB1EA009AB207 /* AppDelegate.h */,
 				AE9B923D16CEB1EA009AB207 /* AppDelegate.m */,
 				AE9B924516CEB1EA009AB207 /* MainStoryboard.storyboard */,

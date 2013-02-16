@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MyTableViewController.h"
+#import "StaticTableViewControllerProtocol.h"
+#import "StaticTableParentProtocol.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <StaticTableParentProtocol>
 
 //-----------------------------------------------------------------------------------------------------------
 #pragma mark - instance variables
@@ -22,13 +24,18 @@
 //-----------------------------------------------------------------------------------------------------------
 
 @property (strong, nonatomic) IBOutlet UILabel *messageLabel;
-@property (nonatomic, weak) MyTableViewController *firstTableViewController;
-@property (nonatomic, weak) MyTableViewController *secondTableViewController;
+@property (nonatomic, weak) UITableViewController <StaticTableViewControllerProtocol> *firstTableViewController;
+@property (nonatomic, weak) UITableViewController <StaticTableViewControllerProtocol> *secondTableViewController;
 
 //-----------------------------------------------------------------------------------------------------------
 #pragma mark - actions
 //-----------------------------------------------------------------------------------------------------------
 
 - (IBAction)buttonAction: (UIButton *) sender;
+
+//-----------------------------------------------------------------------------------------------------------
+#pragma mark - StaticTableParentProtocol methods
+//-----------------------------------------------------------------------------------------------------------
+
 
 @end

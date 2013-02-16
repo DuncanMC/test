@@ -41,10 +41,16 @@
   //For the 2 "embed" segues, save pointers to the view controllers
   
   if ([segue.identifier isEqualToString: @"firstTable"])
+  {
     self.firstTableViewController = segue.destinationViewController;
+    self.firstTableViewController.delegate =self;
+  }
   
   else if ([segue.identifier isEqualToString: @"secondTable"])
+  {
     self.secondTableViewController = segue.destinationViewController;
+    self.secondTableViewController.delegate =self;
+ }
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -63,6 +69,7 @@
 {
   //Disable and dim the button until the animation is complete.
   sender.enabled = FALSE;
+  self.messageLabel.text = @"This button doesn't do anything useful";
   sender.alpha =.5;
   
   //Deselect the items in the 2 table views, if any were selected.
@@ -82,7 +89,7 @@
      //When the animation is finsished, queue up a second
      //animation to fade it away again 1 second later.
      [UIView animateWithDuration: .2
-                           delay: 1
+                           delay: .75
                          options: 0
                       animations:
       ^{
@@ -98,6 +105,67 @@
       ];
    }
    ];
+}
+
+
+//-----------------------------------------------------------------------------------------------------------
+#pragma mark - StaticTableParentProtocol methods
+//-----------------------------------------------------------------------------------------------------------
+
+- (void) tableView: (UITableView *) tableView
+         didSelect: (BOOL) select
+   cellAtIndexPath: (NSIndexPath *)indexPath
+ inViewController : (UIViewController <StaticTableViewControllerProtocol> *) viewController;
+{
+  NSString *clickedTableVCName = @"";
+  if (viewController == self.firstTableViewController)
+    clickedTableVCName = @" first";
+  else if (viewController == self.secondTableViewController)
+    clickedTableVCName = @" second";
+  
+  NSString *displayString = [NSString stringWithFormat: @"You clicked cell %d in the%@ tableview", indexPath.row+1, clickedTableVCName
+                             ];
+  self.messageLabel.text = displayString;
+  self.messageLabel.alpha = 1.0;
+  [UIView animateWithDuration: .2
+                        delay: 1.0
+                      options: 0
+                   animations:
+   ^{
+     self.messageLabel.alpha = 0;
+   }
+                   completion:nil
+   ];
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+- (void) tableView: (UITableView *) tableView
+     clickedButton: (UIButton *) button
+           withTag: (NSInteger) tag
+  inViewController: (UITableViewController <StaticTableViewControllerProtocol>*) viewController;
+{
+  NSLog(@"Entering %s. Tag = %d", __PRETTY_FUNCTION__, tag);
+  NSString *clickedTableVCName = @"";
+  if (viewController == self.firstTableViewController)
+    clickedTableVCName = @" first";
+  else if (viewController == self.secondTableViewController)
+    clickedTableVCName = @" second";
+  
+  NSString *displayString = [NSString stringWithFormat: @"You clicked button %d in the%@ tableview", tag, clickedTableVCName
+                             ];
+  self.messageLabel.text = displayString;
+  self.messageLabel.alpha = 1.0;
+  [UIView animateWithDuration: .2
+                        delay: 1.0
+                      options: 0
+                   animations:
+   ^{
+     self.messageLabel.alpha = 0;
+   }
+                   completion:nil
+   ];
+
 }
 
 @end

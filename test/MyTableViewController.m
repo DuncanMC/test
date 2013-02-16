@@ -41,6 +41,7 @@
 #pragma mark - Table view data source
 //-----------------------------------------------------------------------------------------------------------
 
+//We don't need table view data source methods for a static table. (yay!)
 
 
 //-----------------------------------------------------------------------------------------------------------
@@ -66,7 +67,13 @@
   {
     [self.tableView deselectRowAtIndexPath: indexPath animated: NO];
   }
-
+  if ([self.delegate respondsToSelector: @selector(tableView:didSelect:cellAtIndexPath:inViewController:)])
+  {
+    [self.delegate tableView: tableView
+                   didSelect:  !wasSelected
+             cellAtIndexPath: indexPath
+            inViewController: self];
+  }
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -77,6 +84,22 @@
 {
   NSIndexPath *currentSelection = [self.tableView indexPathForSelectedRow];
   [self.tableView deselectRowAtIndexPath: currentSelection animated: animation];
+}
+
+//-----------------------------------------------------------------------------------------------------------
+#pragma mark - IBAction methods
+//-----------------------------------------------------------------------------------------------------------
+
+- (IBAction)cellButtonTapped:(UIButton *)sender
+{
+  if ([self.delegate respondsToSelector: @selector(tableView:didSelect:cellAtIndexPath:inViewController:)])
+  {
+    [self.delegate tableView: self.tableView
+                   clickedButton:  sender
+                     withTag: sender.tag
+            inViewController: self];
+  }
+
 }
 
 @end
