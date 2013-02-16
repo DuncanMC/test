@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE33B26C16CEC2C600B90514 /* CALayer+setUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9B925116CEC0F1009AB207 /* CALayer+setUIColor.m */; };
 		AE33B26E16CEC2E400B90514 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE33B26D16CEC2E400B90514 /* QuartzCore.framework */; };
 		AE9B922E16CEB1EA009AB207 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922D16CEB1EA009AB207 /* UIKit.framework */; };
 		AE9B923016CEB1EA009AB207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922F16CEB1EA009AB207 /* Foundation.framework */; };
@@ -42,14 +41,14 @@
 		AE9B924616CEB1EA009AB207 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AE9B924816CEB1EA009AB207 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AE9B924916CEB1EA009AB207 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AE9B925016CEC0F1009AB207 /* CALayer+setUIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CALayer+setUIColor.h"; path = "../../FaceDancer/CALayer+setUIColor.h"; sourceTree = "<group>"; };
-		AE9B925116CEC0F1009AB207 /* CALayer+setUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CALayer+setUIColor.m"; path = "../../FaceDancer/CALayer+setUIColor.m"; sourceTree = "<group>"; };
 		AED94ECF16CF2D71009DDE89 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		AED94ED016CF2D71009DDE89 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		AED94ED516CFF3ED009DDE89 /* StaticTableParentProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableParentProtocol.h; sourceTree = "<group>"; };
 		AED94ED616CFF4FD009DDE89 /* StaticTableViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableViewControllerProtocol.h; sourceTree = "<group>"; };
 		AED94ED716D00D66009DDE89 /* StringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringConstants.h; sourceTree = "<group>"; };
 		AED94ED916D0176C009DDE89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AED94EDB16D03C9C009DDE89 /* CALayer+setUIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+setUIColor.h"; sourceTree = "<group>"; };
+		AED94EDC16D03C9C009DDE89 /* CALayer+setUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+setUIColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +97,8 @@
 		AE9B923316CEB1EA009AB207 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				AE9B925016CEC0F1009AB207 /* CALayer+setUIColor.h */,
-				AE9B925116CEC0F1009AB207 /* CALayer+setUIColor.m */,
+				AED94EDB16D03C9C009DDE89 /* CALayer+setUIColor.h */,
+				AED94EDC16D03C9C009DDE89 /* CALayer+setUIColor.m */,
 				AED94ED516CFF3ED009DDE89 /* StaticTableParentProtocol.h */,
 				AED94ED616CFF4FD009DDE89 /* StaticTableViewControllerProtocol.h */,
 				AE9B923C16CEB1EA009AB207 /* AppDelegate.h */,
@@ -200,7 +199,6 @@
 				AE9B923A16CEB1EA009AB207 /* main.m in Sources */,
 				AE9B923E16CEB1EA009AB207 /* AppDelegate.m in Sources */,
 				AE9B924A16CEB1EA009AB207 /* ViewController.m in Sources */,
-				AE33B26C16CEC2C600B90514 /* CALayer+setUIColor.m in Sources */,
 				AED94ED116CF2D71009DDE89 /* MyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
