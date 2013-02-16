@@ -69,13 +69,15 @@
 {
   //Disable and dim the button until the animation is complete.
   sender.enabled = FALSE;
-  self.messageLabel.text = NSLocalizedString(K_USELESS_BUTTON_STRING,
-                                             @"Message that the button the user clicked doesn't do anything useful.");
   sender.alpha =.5;
   
+  //set the message label text to a localized form of "This button doesn't do anything useful"
+  self.messageLabel.text = NSLocalizedString(@"This button doesn't do anything useful",
+                                             @"Message that the button the user clicked doesn't do anything useful.");
+  
   //Deselect the items in the 2 table views, if any were selected.
-  [self.firstTableViewController deselectItemsWithAnimation: YES];
-  [self.secondTableViewController deselectItemsWithAnimation: YES];
+  [self.firstTableViewController deselectItemsWithAnimation: NO];
+  [self.secondTableViewController deselectItemsWithAnimation: NO];
   
   //Animate in the "this button doesn't do anything useful" message
   //onto the screen.
@@ -118,13 +120,23 @@
    cellAtIndexPath: (NSIndexPath *)indexPath
  inViewController : (UIViewController <StaticTableViewControllerProtocol> *) viewController;
 {
+  //Build a localized word for " first" or " second" based on which table view the user clicked in.
   NSString *clickedTableVCName = @"";
   if (viewController == self.firstTableViewController)
-    clickedTableVCName = K_FIRST_STRING;
+    clickedTableVCName = NSLocalizedString(@" first", @"The word ' first' with a preceding space");
   else if (viewController == self.secondTableViewController)
-    clickedTableVCName = @" second";
+    clickedTableVCName = NSLocalizedString(@" second", @"The word ' second' with a preceding space");
+
+  //Create a localized word "selected" or "deselected" in selectedStateString
+  NSString *selectedString = NSLocalizedString(@"selected", nil);
+  NSString *deselectedString = NSLocalizedString(@"deselected", nil);
+  NSString *selectedStateString = select ? selectedString : deselectedString;
   
-  NSString *displayString = [NSString stringWithFormat: @"You clicked cell %d in the%@ tableview", indexPath.row+1, clickedTableVCName
+  //Get a localized copy of the format string for the full sentence.
+  NSString *clickedFormatString = NSLocalizedString(@"You %@ cell %d in the%@ tableview", nil);
+  
+  //Build the fully localized string for display.
+  NSString *displayString = [NSString stringWithFormat: clickedFormatString, selectedStateString, indexPath.row+1, clickedTableVCName
                              ];
   self.messageLabel.text = displayString;
   self.messageLabel.alpha = 1.0;
@@ -149,12 +161,12 @@
   //NSLog(@"Entering %s. Tag = %d", __PRETTY_FUNCTION__, tag);
   NSString *clickedTableVCName = @"";
   if (viewController == self.firstTableViewController)
-    clickedTableVCName = NSLocalizedString(K_FIRST_STRING, @"The word ' first' with a preceding space");
+    clickedTableVCName = NSLocalizedString(@" first", @"The word ' first' with a preceding space");
                                     
   else if (viewController == self.secondTableViewController)
-    clickedTableVCName = NSLocalizedString(K_SECOND_STRING, @"The word ' second' with a preceding space");
+    clickedTableVCName = NSLocalizedString(@" second", @"The word ' second' with a preceding space");
   
-  NSString *youClickedFormatString = NSLocalizedString(K_YOU_CLICKED_STRING, @"String to tell user which button they clicked");
+  NSString *youClickedFormatString = NSLocalizedString(  @"You clicked button %d in the%@ tableview", @"String to tell user which button they clicked");
   NSString *displayString = [NSString stringWithFormat: youClickedFormatString, tag, clickedTableVCName
                              ];
   self.messageLabel.text = displayString;
