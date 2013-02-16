@@ -47,6 +47,7 @@
 		AED94ED016CF2D71009DDE89 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		AED94ED516CFF3ED009DDE89 /* StaticTableParentProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableParentProtocol.h; sourceTree = "<group>"; };
 		AED94ED616CFF4FD009DDE89 /* StaticTableViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableViewControllerProtocol.h; sourceTree = "<group>"; };
+		AED94ED716D00D66009DDE89 /* StringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 				AED94ECF16CF2D71009DDE89 /* MyTableViewController.h */,
 				AED94ED016CF2D71009DDE89 /* MyTableViewController.m */,
 				AE9B923416CEB1EA009AB207 /* Supporting Files */,
+				AED94ED716D00D66009DDE89 /* StringConstants.h */,
 			);
 			path = test;
 			sourceTree = "<group>";

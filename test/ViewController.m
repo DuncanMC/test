@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "StringConstants.h"
 
 //-----------------------------------------------------------------------------------------------------------
 #pragma mark - Put "private" methods here.
@@ -16,7 +17,6 @@
 @end
 
 @implementation ViewController
-
 
 //-----------------------------------------------------------------------------------------------------------
 #pragma mark - View controller life cycle methods
@@ -36,7 +36,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-  NSLog(@"Entering %s for segue %@", __PRETTY_FUNCTION__, segue.identifier);
+  //NSLog(@"Entering %s for segue %@", __PRETTY_FUNCTION__, segue.identifier);
   
   //For the 2 "embed" segues, save pointers to the view controllers
   
@@ -69,7 +69,8 @@
 {
   //Disable and dim the button until the animation is complete.
   sender.enabled = FALSE;
-  self.messageLabel.text = @"This button doesn't do anything useful";
+  self.messageLabel.text = NSLocalizedString(K_USELESS_BUTTON_STRING,
+                                             @"Message that the button the user clicked doesn't do anything useful.");
   sender.alpha =.5;
   
   //Deselect the items in the 2 table views, if any were selected.
@@ -119,7 +120,7 @@
 {
   NSString *clickedTableVCName = @"";
   if (viewController == self.firstTableViewController)
-    clickedTableVCName = @" first";
+    clickedTableVCName = K_FIRST_STRING;
   else if (viewController == self.secondTableViewController)
     clickedTableVCName = @" second";
   
@@ -145,14 +146,16 @@
            withTag: (NSInteger) tag
   inViewController: (UITableViewController <StaticTableViewControllerProtocol>*) viewController;
 {
-  NSLog(@"Entering %s. Tag = %d", __PRETTY_FUNCTION__, tag);
+  //NSLog(@"Entering %s. Tag = %d", __PRETTY_FUNCTION__, tag);
   NSString *clickedTableVCName = @"";
   if (viewController == self.firstTableViewController)
-    clickedTableVCName = @" first";
+    clickedTableVCName = NSLocalizedString(K_FIRST_STRING, @"The word ' first' with a preceding space");
+                                    
   else if (viewController == self.secondTableViewController)
-    clickedTableVCName = @" second";
+    clickedTableVCName = NSLocalizedString(K_SECOND_STRING, @"The word ' second' with a preceding space");
   
-  NSString *displayString = [NSString stringWithFormat: @"You clicked button %d in the%@ tableview", tag, clickedTableVCName
+  NSString *youClickedFormatString = NSLocalizedString(K_YOU_CLICKED_STRING, @"String to tell user which button they clicked");
+  NSString *displayString = [NSString stringWithFormat: youClickedFormatString, tag, clickedTableVCName
                              ];
   self.messageLabel.text = displayString;
   self.messageLabel.alpha = 1.0;
