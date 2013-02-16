@@ -20,6 +20,7 @@
 		AE9B924416CEB1EA009AB207 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9B924316CEB1EA009AB207 /* Default-568h@2x.png */; };
 		AE9B924716CEB1EA009AB207 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9B924516CEB1EA009AB207 /* MainStoryboard.storyboard */; };
 		AE9B924A16CEB1EA009AB207 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9B924916CEB1EA009AB207 /* ViewController.m */; };
+		AED94ED116CF2D71009DDE89 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED94ED016CF2D71009DDE89 /* MyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		AE9B924916CEB1EA009AB207 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AE9B925016CEC0F1009AB207 /* CALayer+setUIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CALayer+setUIColor.h"; path = "../../FaceDancer/CALayer+setUIColor.h"; sourceTree = "<group>"; };
 		AE9B925116CEC0F1009AB207 /* CALayer+setUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CALayer+setUIColor.m"; path = "../../FaceDancer/CALayer+setUIColor.m"; sourceTree = "<group>"; };
+		AED94ECF16CF2D71009DDE89 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		AED94ED016CF2D71009DDE89 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				AE9B924516CEB1EA009AB207 /* MainStoryboard.storyboard */,
 				AE9B924816CEB1EA009AB207 /* ViewController.h */,
 				AE9B924916CEB1EA009AB207 /* ViewController.m */,
+				AED94ECF16CF2D71009DDE89 /* MyTableViewController.h */,
+				AED94ED016CF2D71009DDE89 /* MyTableViewController.m */,
 				AE9B923416CEB1EA009AB207 /* Supporting Files */,
 			);
 			path = test;
@@ -186,6 +191,7 @@
 				AE9B923E16CEB1EA009AB207 /* AppDelegate.m in Sources */,
 				AE9B924A16CEB1EA009AB207 /* ViewController.m in Sources */,
 				AE33B26C16CEC2C600B90514 /* CALayer+setUIColor.m in Sources */,
+				AED94ED116CF2D71009DDE89 /* MyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,6 +23,8 @@ dsa_priv.pem
 *.perspectivev3
 *.pbxuser
 # Xcode 4
+#/test.xcodeproj/xcuserdata/*
+*/xcuserdata/*
 xcuserdata/*
 project.xcworkspace/
 /ChromaKey.xcodeproj/project.xcworkspace/xcuserdata/*
