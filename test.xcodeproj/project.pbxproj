@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE33B26E16CEC2E400B90514 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE33B26D16CEC2E400B90514 /* QuartzCore.framework */; };
+		AE78915616DA69CF007706A4 /* CALayer+setUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = AED94EDC16D03C9C009DDE89 /* CALayer+setUIColor.m */; };
 		AE9B922E16CEB1EA009AB207 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922D16CEB1EA009AB207 /* UIKit.framework */; };
 		AE9B923016CEB1EA009AB207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922F16CEB1EA009AB207 /* Foundation.framework */; };
 		AE9B923216CEB1EA009AB207 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B923116CEB1EA009AB207 /* CoreGraphics.framework */; };
@@ -200,6 +201,7 @@
 				AE9B923E16CEB1EA009AB207 /* AppDelegate.m in Sources */,
 				AE9B924A16CEB1EA009AB207 /* ViewController.m in Sources */,
 				AED94ED116CF2D71009DDE89 /* MyTableViewController.m in Sources */,
+				AE78915616DA69CF007706A4 /* CALayer+setUIColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
