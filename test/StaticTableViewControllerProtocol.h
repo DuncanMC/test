@@ -11,6 +11,7 @@
 
 //Forward declaration of StaticTableParentProtocol,
 //since the delegate in StaticTableViewControllerProtocol.h conforms to the StaticTableParentProtocol
+
 @protocol StaticTableParentProtocol;
 
 @protocol StaticTableViewControllerProtocol <NSObject>
