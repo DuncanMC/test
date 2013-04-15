@@ -21,7 +21,7 @@
 
 - (void) tableView: (UITableView *) tableView
      clickedButton: (UIButton *) button
-           withTag: (NSInteger) tag
+       atIndexPath: (NSIndexPath *) buttonIndexPath
   inViewController: (UITableViewController <StaticTableViewControllerProtocol>*) viewController;
 
 @end

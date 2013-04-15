@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE33B26E16CEC2E400B90514 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE33B26D16CEC2E400B90514 /* QuartzCore.framework */; };
+		AE3FD07D171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3FD07B171C5ABC00433ED7 /* UITableView+indexPathForCellContainingView.m */; };
 		AE78915616DA69CF007706A4 /* CALayer+setUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = AED94EDC16D03C9C009DDE89 /* CALayer+setUIColor.m */; };
 		AE9B922E16CEB1EA009AB207 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922D16CEB1EA009AB207 /* UIKit.framework */; };
 		AE9B923016CEB1EA009AB207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922F16CEB1EA009AB207 /* Foundation.framework */; };
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		AE33B26D16CEC2E400B90514 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AE3FD07B171C5ABC00433ED7 /* UITableView+indexPathForCellContainingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+indexPathForCellContainingView.m"; sourceTree = "<group>"; };
+		AE3FD07C171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+indexPathForCellContainingView.h"; sourceTree = "<group>"; };
 		AE9B922A16CEB1EA009AB207 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9B922D16CEB1EA009AB207 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE9B922F16CEB1EA009AB207 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +103,8 @@
 			children = (
 				AED94EDB16D03C9C009DDE89 /* CALayer+setUIColor.h */,
 				AED94EDC16D03C9C009DDE89 /* CALayer+setUIColor.m */,
+				AE3FD07B171C5ABC00433ED7 /* UITableView+indexPathForCellContainingView.m */,
+				AE3FD07C171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.h */,
 				AED94ED516CFF3ED009DDE89 /* StaticTableParentProtocol.h */,
 				AED94ED616CFF4FD009DDE89 /* StaticTableViewControllerProtocol.h */,
 				AE9B923C16CEB1EA009AB207 /* AppDelegate.h */,
@@ -202,6 +207,7 @@
 				AE9B924A16CEB1EA009AB207 /* ViewController.m in Sources */,
 				AED94ED116CF2D71009DDE89 /* MyTableViewController.m in Sources */,
 				AE78915616DA69CF007706A4 /* CALayer+setUIColor.m in Sources */,
+				AE3FD07D171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

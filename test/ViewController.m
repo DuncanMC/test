@@ -90,7 +90,7 @@
                    completion:
    ^(BOOL finished){
      //When the animation is finsished, queue up a second
-     //animation to fade it away again 1 second later.
+     //animation to fade the message away again .75 seconds later.
      [UIView animateWithDuration: .2
                            delay: .75
                          options: 0
@@ -138,8 +138,12 @@
   //Build the fully localized string for display.
   NSString *displayString = [NSString stringWithFormat: clickedFormatString, selectedStateString, indexPath.row+1, clickedTableVCName
                              ];
+  
+  //Show the message
   self.messageLabel.text = displayString;
-  self.messageLabel.alpha = 1.0;
+  self.messageLabel.alpha = 1.0;   //Make the message label visible.
+  
+  //Create an animation that begins after 1 second and fades away the message
   [UIView animateWithDuration: .2
                         delay: 1.0
                       options: 0
@@ -155,10 +159,13 @@
 
 - (void) tableView: (UITableView *) tableView
      clickedButton: (UIButton *) button
-           withTag: (NSInteger) tag
+       atIndexPath: (NSIndexPath *) buttonIndexPath
   inViewController: (UITableViewController <StaticTableViewControllerProtocol>*) viewController;
 {
-  //NSLog(@"Entering %s. Tag = %d", __PRETTY_FUNCTION__, tag);
+  NSInteger oneBasedCellNumber = -1;
+  if (buttonIndexPath)
+    oneBasedCellNumber = buttonIndexPath.row + 1;
+  
   NSString *clickedTableVCName = @"";
   if (viewController == self.firstTableViewController)
     clickedTableVCName = NSLocalizedString(@" first", @"The word ' first' with a preceding space");
@@ -167,10 +174,14 @@
     clickedTableVCName = NSLocalizedString(@" second", @"The word ' second' with a preceding space");
   
   NSString *youClickedFormatString = NSLocalizedString(  @"You clicked button %d in the%@ tableview", @"String to tell user which button they clicked");
-  NSString *displayString = [NSString stringWithFormat: youClickedFormatString, tag, clickedTableVCName
+  NSString *displayString = [NSString stringWithFormat: youClickedFormatString, oneBasedCellNumber, clickedTableVCName
                              ];
+  
+  //Show the message
   self.messageLabel.text = displayString;
-  self.messageLabel.alpha = 1.0;
+  self.messageLabel.alpha = 1.0;  //Make the message label visible.
+  
+  //Create an animation that begins after 1 second and fades away the message
   [UIView animateWithDuration: .2
                         delay: 1.0
                       options: 0

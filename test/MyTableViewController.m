@@ -8,6 +8,7 @@
 //  test change
 
 #import "MyTableViewController.h"
+#import "UITableView+indexPathForCellContainingView.h"
 
 @interface MyTableViewController ()
 
@@ -87,6 +88,8 @@
   [self.tableView deselectRowAtIndexPath: currentSelection animated: animation];
 }
 
+
+
 //-----------------------------------------------------------------------------------------------------------
 #pragma mark - IBAction methods
 //-----------------------------------------------------------------------------------------------------------
@@ -95,9 +98,10 @@
 {
   if ([self.delegate respondsToSelector: @selector(tableView:didSelect:cellAtIndexPath:inViewController:)])
   {
+    NSIndexPath *buttonIndexPath = [self.tableView indexPathForCellContainingView: sender];
     [self.delegate tableView: self.tableView
-                   clickedButton:  sender
-                     withTag: sender.tag
+               clickedButton: sender
+                 atIndexPath: buttonIndexPath
             inViewController: self];
   }
 
