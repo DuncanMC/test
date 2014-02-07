@@ -21,6 +21,7 @@
 		AE9B924416CEB1EA009AB207 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9B924316CEB1EA009AB207 /* Default-568h@2x.png */; };
 		AE9B924716CEB1EA009AB207 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9B924516CEB1EA009AB207 /* MainStoryboard.storyboard */; };
 		AE9B924A16CEB1EA009AB207 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9B924916CEB1EA009AB207 /* ViewController.m */; };
+		AECF02F517F9E4ED00276FCF /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6D47A317F9DF6B003087F2 /* GradientButton.m */; };
 		AED94ED116CF2D71009DDE89 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED94ED016CF2D71009DDE89 /* MyTableViewController.m */; };
 		AED94EDA16D0176C009DDE89 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AED94ED816D0176C009DDE89 /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,8 @@
 		AE33B26D16CEC2E400B90514 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AE3FD07B171C5ABC00433ED7 /* UITableView+indexPathForCellContainingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+indexPathForCellContainingView.m"; sourceTree = "<group>"; };
 		AE3FD07C171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+indexPathForCellContainingView.h"; sourceTree = "<group>"; };
+		AE6D47A317F9DF6B003087F2 /* GradientButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
+		AE6D47A417F9DF6B003087F2 /* GradientButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
 		AE9B922A16CEB1EA009AB207 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9B922D16CEB1EA009AB207 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE9B922F16CEB1EA009AB207 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +117,8 @@
 				AE9B924916CEB1EA009AB207 /* ViewController.m */,
 				AED94ECF16CF2D71009DDE89 /* MyTableViewController.h */,
 				AED94ED016CF2D71009DDE89 /* MyTableViewController.m */,
+				AE6D47A317F9DF6B003087F2 /* GradientButton.m */,
+				AE6D47A417F9DF6B003087F2 /* GradientButton.h */,
 				AE9B923416CEB1EA009AB207 /* Supporting Files */,
 				AED94ED716D00D66009DDE89 /* StringConstants.h */,
 				AED94ED816D0176C009DDE89 /* Localizable.strings */,
@@ -208,6 +213,7 @@
 				AED94ED116CF2D71009DDE89 /* MyTableViewController.m in Sources */,
 				AE78915616DA69CF007706A4 /* CALayer+setUIColor.m in Sources */,
 				AE3FD07D171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.m in Sources */,
+				AECF02F517F9E4ED00276FCF /* GradientButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
