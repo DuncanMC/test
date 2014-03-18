@@ -47,6 +47,10 @@
    (id)[UIColor colorWithRed: .4 green: .4 blue: .4 alpha: 1.0].CGColor,
    (id)[UIColor colorWithRed: .2 green: .2 blue: .2 alpha: 1.0].CGColor
    ];
+  self.titleLabel.textColor = [UIColor colorWithRed: 200/255.0
+                                              green: 200/255.0
+                                               blue: 255/255.0 alpha: 1];
+
 }
 
 - (void) setHighlightColors;
