@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AE33B26E16CEC2E400B90514 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE33B26D16CEC2E400B90514 /* QuartzCore.framework */; };
 		AE3FD07D171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3FD07B171C5ABC00433ED7 /* UITableView+indexPathForCellContainingView.m */; };
+		AE5A497B18D8A0B8008F1B9E /* WareTo icon 60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5A497A18D8A0B8008F1B9E /* WareTo icon 60x60@2x.png */; };
+		AE5A497E18D8A15B008F1B9E /* WareTo icon 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5A497C18D8A15B008F1B9E /* WareTo icon 57x57.png */; };
+		AE5A497F18D8A15B008F1B9E /* WareTo icon 57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5A497D18D8A15B008F1B9E /* WareTo icon 57x57@2x.png */; };
 		AE78915616DA69CF007706A4 /* CALayer+setUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = AED94EDC16D03C9C009DDE89 /* CALayer+setUIColor.m */; };
 		AE9B922E16CEB1EA009AB207 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922D16CEB1EA009AB207 /* UIKit.framework */; };
 		AE9B923016CEB1EA009AB207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B922F16CEB1EA009AB207 /* Foundation.framework */; };
@@ -30,6 +33,11 @@
 		AE33B26D16CEC2E400B90514 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AE3FD07B171C5ABC00433ED7 /* UITableView+indexPathForCellContainingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+indexPathForCellContainingView.m"; sourceTree = "<group>"; };
 		AE3FD07C171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+indexPathForCellContainingView.h"; sourceTree = "<group>"; };
+		AE5A497618D89341008F1B9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		AE5A497718D89368008F1B9E /* Static tableviews screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Static tableviews screenshot.png"; sourceTree = SOURCE_ROOT; };
+		AE5A497A18D8A0B8008F1B9E /* WareTo icon 60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WareTo icon 60x60@2x.png"; sourceTree = "<group>"; };
+		AE5A497C18D8A15B008F1B9E /* WareTo icon 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WareTo icon 57x57.png"; sourceTree = "<group>"; };
+		AE5A497D18D8A15B008F1B9E /* WareTo icon 57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WareTo icon 57x57@2x.png"; sourceTree = "<group>"; };
 		AE6D47A317F9DF6B003087F2 /* GradientButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
 		AE6D47A417F9DF6B003087F2 /* GradientButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
 		AE9B922A16CEB1EA009AB207 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +81,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE5A497518D89332008F1B9E /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				AE5A497718D89368008F1B9E /* Static tableviews screenshot.png */,
+				AE5A497618D89341008F1B9E /* README.md */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		AE5A497818D897EE008F1B9E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AED94EDB16D03C9C009DDE89 /* CALayer+setUIColor.h */,
+				AED94EDC16D03C9C009DDE89 /* CALayer+setUIColor.m */,
+				AE3FD07B171C5ABC00433ED7 /* UITableView+indexPathForCellContainingView.m */,
+				AE3FD07C171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.h */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		AE5A497918D897FF008F1B9E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AED94ED516CFF3ED009DDE89 /* StaticTableParentProtocol.h */,
+				AED94ED616CFF4FD009DDE89 /* StaticTableViewControllerProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		AE5A498018D8A19F008F1B9E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AE9B923F16CEB1EA009AB207 /* Default.png */,
+				AE9B924116CEB1EA009AB207 /* Default@2x.png */,
+				AE9B924316CEB1EA009AB207 /* Default-568h@2x.png */,
+				AE5A497A18D8A0B8008F1B9E /* WareTo icon 60x60@2x.png */,
+				AE5A497C18D8A15B008F1B9E /* WareTo icon 57x57.png */,
+				AE5A497D18D8A15B008F1B9E /* WareTo icon 57x57@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		AE9B922116CEB1EA009AB207 = {
 			isa = PBXGroup;
 			children = (
@@ -104,12 +154,8 @@
 		AE9B923316CEB1EA009AB207 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				AED94EDB16D03C9C009DDE89 /* CALayer+setUIColor.h */,
-				AED94EDC16D03C9C009DDE89 /* CALayer+setUIColor.m */,
-				AE3FD07B171C5ABC00433ED7 /* UITableView+indexPathForCellContainingView.m */,
-				AE3FD07C171C5ABD00433ED7 /* UITableView+indexPathForCellContainingView.h */,
-				AED94ED516CFF3ED009DDE89 /* StaticTableParentProtocol.h */,
-				AED94ED616CFF4FD009DDE89 /* StaticTableViewControllerProtocol.h */,
+				AE5A497818D897EE008F1B9E /* Categories */,
+				AE5A497918D897FF008F1B9E /* Protocols */,
 				AE9B923C16CEB1EA009AB207 /* AppDelegate.h */,
 				AE9B923D16CEB1EA009AB207 /* AppDelegate.m */,
 				AE9B924516CEB1EA009AB207 /* MainStoryboard.storyboard */,
@@ -117,8 +163,8 @@
 				AE9B924916CEB1EA009AB207 /* ViewController.m */,
 				AED94ECF16CF2D71009DDE89 /* MyTableViewController.h */,
 				AED94ED016CF2D71009DDE89 /* MyTableViewController.m */,
-				AE6D47A317F9DF6B003087F2 /* GradientButton.m */,
 				AE6D47A417F9DF6B003087F2 /* GradientButton.h */,
+				AE6D47A317F9DF6B003087F2 /* GradientButton.m */,
 				AE9B923416CEB1EA009AB207 /* Supporting Files */,
 				AED94ED716D00D66009DDE89 /* StringConstants.h */,
 				AED94ED816D0176C009DDE89 /* Localizable.strings */,
@@ -129,13 +175,12 @@
 		AE9B923416CEB1EA009AB207 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE5A497518D89332008F1B9E /* Documentation */,
 				AE9B923516CEB1EA009AB207 /* test-Info.plist */,
 				AE9B923616CEB1EA009AB207 /* InfoPlist.strings */,
 				AE9B923916CEB1EA009AB207 /* main.m */,
 				AE9B923B16CEB1EA009AB207 /* test-Prefix.pch */,
-				AE9B923F16CEB1EA009AB207 /* Default.png */,
-				AE9B924116CEB1EA009AB207 /* Default@2x.png */,
-				AE9B924316CEB1EA009AB207 /* Default-568h@2x.png */,
+				AE5A498018D8A19F008F1B9E /* Images */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -194,9 +239,12 @@
 				AE9B923816CEB1EA009AB207 /* InfoPlist.strings in Resources */,
 				AE9B924016CEB1EA009AB207 /* Default.png in Resources */,
 				AE9B924216CEB1EA009AB207 /* Default@2x.png in Resources */,
+				AE5A497E18D8A15B008F1B9E /* WareTo icon 57x57.png in Resources */,
+				AE5A497F18D8A15B008F1B9E /* WareTo icon 57x57@2x.png in Resources */,
 				AE9B924416CEB1EA009AB207 /* Default-568h@2x.png in Resources */,
 				AE9B924716CEB1EA009AB207 /* MainStoryboard.storyboard in Resources */,
 				AED94EDA16D0176C009DDE89 /* Localizable.strings in Resources */,
+				AE5A497B18D8A0B8008F1B9E /* WareTo icon 60x60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

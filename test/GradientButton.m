@@ -11,12 +11,41 @@
 
 @implementation GradientButton
 
+//-----------------------------------------------------------------------------------------------------------
+#pragma mark - Class methods
+//-----------------------------------------------------------------------------------------------------------
 
 //Tell the system to use a gradient layer as this button's backing layer
 + (Class) layerClass {
   return [CAGradientLayer class];
 }
 
+//-----------------------------------------------------------------------------------------------------------
+#pragma mark - property methods
+//-----------------------------------------------------------------------------------------------------------
+
+- (void) setEnabled:(BOOL)enabled
+{
+  [super setEnabled: enabled];
+  self.titleLabel.textColor = [UIColor colorWithRed: 200/255.0
+                                              green: 200/255.0
+                                               blue: 255/255.0 alpha: 1];
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+- (void)setHighlighted:(BOOL)highlighted
+{
+  [super setHighlighted:highlighted];
+  if (highlighted)
+    [self useHighlightColors];
+  else
+    [self useNormalColors];
+}
+
+//-----------------------------------------------------------------------------------------------------------
+#pragma mark - Object lifecycle methods
+//-----------------------------------------------------------------------------------------------------------
 
 - (void) doInitSetup;
 {
@@ -29,31 +58,65 @@
   gradient.masksToBounds = YES;
   
   //Set the colors and color locations for the gradient.
-  [self setNormalColors];
+  [self useNormalColors];
   gradient.locations = @[@0, @.1, @.3, @.8, @1];
-
 }
 
-- (void) setNormalColors;
+//-----------------------------------------------------------------------------------------------------------
+
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+  self = [super initWithCoder: aDecoder];
+  if (!self)
+    return nil;
+  [self doInitSetup];
+  return self;
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+- (id)initWithFrame:(CGRect)frame
+{
+  self = [super initWithFrame:frame];
+  if (!self)
+    return nil;
+  [self doInitSetup];
+  return self;
+}
+
+//-----------------------------------------------------------------------------------------------------------
+#pragma mark - custom instance methods
+//-----------------------------------------------------------------------------------------------------------
+
+- (void) changeTitleColor;
+{
+  self.titleLabel.textColor = [UIColor colorWithRed: 200/255.0
+                                              green: 200/255.0
+                                               blue: 255/255.0
+                                              alpha: 1];
+};
+
+//-----------------------------------------------------------------------------------------------------------
+
+- (void) useNormalColors;
 {
   //Set the colors for the unhighlighted state
   ((CAGradientLayer *)self.layer).colors =
   @[
-//   (id)[UIColor darkGrayColor].CGColor,
-//   (id)[UIColor darkGrayColor].CGColor,
-   (id)[UIColor colorWithRed: .50 green: .50 blue: .50 alpha: 1.0].CGColor,
-   (id)[UIColor colorWithRed: .60 green: .60 blue: .60 alpha: 1.0].CGColor,
-   (id)[UIColor colorWithRed: .4 green: .4 blue: .4 alpha: 1.0].CGColor,
-   (id)[UIColor colorWithRed: .4 green: .4 blue: .4 alpha: 1.0].CGColor,
-   (id)[UIColor colorWithRed: .2 green: .2 blue: .2 alpha: 1.0].CGColor
-   ];
-  self.titleLabel.textColor = [UIColor colorWithRed: 200/255.0
-                                              green: 200/255.0
-                                               blue: 255/255.0 alpha: 1];
-
+    //   (id)[UIColor darkGrayColor].CGColor,
+    //   (id)[UIColor darkGrayColor].CGColor,
+    (id)[UIColor colorWithRed: .50 green: .50 blue: .50 alpha: 1.0].CGColor,
+    (id)[UIColor colorWithRed: .60 green: .60 blue: .60 alpha: 1.0].CGColor,
+    (id)[UIColor colorWithRed: .4 green: .4 blue: .4 alpha: 1.0].CGColor,
+    (id)[UIColor colorWithRed: .4 green: .4 blue: .4 alpha: 1.0].CGColor,
+    (id)[UIColor colorWithRed: .2 green: .2 blue: .2 alpha: 1.0].CGColor
+    ];
+  [self changeTitleColor];
 }
 
-- (void) setHighlightColors;
+//-----------------------------------------------------------------------------------------------------------
+
+- (void) useHighlightColors;
 {
   //Set the gradient colors for the highlighted state
   ((CAGradientLayer *)self.layer).colors =
@@ -66,31 +129,5 @@
     ];
 }
 
-- (void)setHighlighted:(BOOL)highlighted
-{
-  [super setHighlighted:highlighted];
-  if (highlighted)
-    [self setHighlightColors];
-  else
-    [self setNormalColors];
-}
-
-- (id) initWithCoder:(NSCoder *)aDecoder
-{
-  self = [super initWithCoder: aDecoder];
-  if (!self)
-    return nil;
-  [self doInitSetup];
-  return self;
-}
-
-- (id)initWithFrame:(CGRect)frame
-{
-  self = [super initWithFrame:frame];
-  if (!self)
-    return nil;
-  [self doInitSetup];
-  return self;
-}
 
 @end

@@ -79,7 +79,7 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------
-#pragma mark - Public interface methods
+#pragma mark - StaticTableViewControllerProtocol methods
 //-----------------------------------------------------------------------------------------------------------
 
 - (void) deselectItemsWithAnimation: (BOOL) animation;

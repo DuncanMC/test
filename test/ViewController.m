@@ -62,6 +62,21 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------
+#pragma mark - custom instance methods
+//-----------------------------------------------------------------------------------------------------------
+
+- (NSString *) firstOrSecondVCStringForVC: (UIViewController *)theVC;
+{
+  NSString *firstOrSecondVCString = @"";
+  
+  if (theVC == self.firstTableViewController)
+    firstOrSecondVCString = NSLocalizedString(@" first", @"The word ' first' with a preceding space");
+  else if (theVC == self.secondTableViewController)
+    firstOrSecondVCString = NSLocalizedString(@" second", @"The word ' second' with a preceding space");
+  return firstOrSecondVCString;
+}
+
+//-----------------------------------------------------------------------------------------------------------
 #pragma mark - IBAction methods
 //-----------------------------------------------------------------------------------------------------------
 
@@ -114,18 +129,18 @@
 //-----------------------------------------------------------------------------------------------------------
 #pragma mark - StaticTableParentProtocol methods
 //-----------------------------------------------------------------------------------------------------------
+/*
+ Thsese are the methods that get called when the user selects a cell or taps a button in one of our child
+ UITableViewControllers.
+ */
 
 - (void) tableView: (UITableView *) tableView
          didSelect: (BOOL) select
    cellAtIndexPath: (NSIndexPath *)indexPath
  inViewController : (UIViewController <StaticTableViewControllerProtocol> *) viewController;
 {
-  //Build a localized word for " first" or " second" based on which table view the user clicked in.
-  NSString *clickedTableVCName = @"";
-  if (viewController == self.firstTableViewController)
-    clickedTableVCName = NSLocalizedString(@" first", @"The word ' first' with a preceding space");
-  else if (viewController == self.secondTableViewController)
-    clickedTableVCName = NSLocalizedString(@" second", @"The word ' second' with a preceding space");
+  //----Build a localized word for " first" or " second" based on which table view the user clicked in.
+  NSString *clickedTableVCName = [self firstOrSecondVCStringForVC: viewController];
 
   //Create a localized word "selected" or "deselected" in selectedStateString
   NSString *selectedString = NSLocalizedString(@"selected", nil);
@@ -166,12 +181,8 @@
   if (buttonIndexPath)
     oneBasedCellNumber = buttonIndexPath.row + 1;
   
-  NSString *clickedTableVCName = @"";
-  if (viewController == self.firstTableViewController)
-    clickedTableVCName = NSLocalizedString(@" first", @"The word ' first' with a preceding space");
-                                    
-  else if (viewController == self.secondTableViewController)
-    clickedTableVCName = NSLocalizedString(@" second", @"The word ' second' with a preceding space");
+  //----Build a localized word for " first" or " second" based on which table view the user clicked in.
+  NSString *clickedTableVCName = [self firstOrSecondVCStringForVC: viewController];
   
   NSString *youClickedFormatString = NSLocalizedString(  @"You clicked button %d in the%@ tableview", @"String to tell user which button they clicked");
   NSString *displayString = [NSString stringWithFormat: youClickedFormatString, oneBasedCellNumber, clickedTableVCName
